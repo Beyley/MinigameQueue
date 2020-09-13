@@ -1,0 +1,17 @@
+main: poltixe.spigot.minigamequeue.App
+name: MinigameQueue
+version: 0.1
+
+commands:
+    readycheck:
+      description: Checks who is ready
+      usage: /readycheck
+      permission: minigamequeue.readycheck
+    ready:
+      description: Ready up
+      usage: /readyup
+      permission: minigamequeue.readyup
+    forcestart:
+      description: Starts the game no matter what
+      usage: /forcestart
+      permission: minigamequeue.forcestart
