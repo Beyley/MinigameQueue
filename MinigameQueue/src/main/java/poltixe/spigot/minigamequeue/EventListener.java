@@ -1,6 +1,7 @@
 package poltixe.spigot.minigamequeue;
 
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.Server;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
@@ -20,6 +21,8 @@ public class EventListener implements Listener {
         Player target = event.getPlayer();
 
         target.setMetadata("ready", new FixedMetadataValue(App.getPlugin(App.class), false));
+
+        target.setGameMode(GameMode.ADVENTURE);
         // target.setMetadata("imposter", new
         // FixedMetadataValue(App.getPlugin(App.class), false));
     }
