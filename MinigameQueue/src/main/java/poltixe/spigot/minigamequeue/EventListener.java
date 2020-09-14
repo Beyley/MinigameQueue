@@ -12,9 +12,9 @@ import org.bukkit.metadata.*;
 import net.md_5.bungee.api.ChatColor;
 
 public class EventListener implements Listener {
-    // App app = new App();
+    App app = App.getPlugin(App.class);
 
-    FileConfiguration config = App.getPlugin(App.class).getConfig();
+    FileConfiguration config = app.getConfig();
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
@@ -22,7 +22,11 @@ public class EventListener implements Listener {
 
         target.setMetadata("ready", new FixedMetadataValue(App.getPlugin(App.class), false));
 
-        target.setGameMode(GameMode.ADVENTURE);
+        if (app.gameStarted) {
+            target.setGameMode(GameMode.SPECTATOR);
+        } else {
+            target.setGameMode(GameMode.ADVENTURE);
+        }
         // target.setMetadata("imposter", new
         // FixedMetadataValue(App.getPlugin(App.class), false));
     }
