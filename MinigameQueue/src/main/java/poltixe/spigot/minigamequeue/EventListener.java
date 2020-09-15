@@ -24,6 +24,9 @@ public class EventListener implements Listener {
         // Gets the target of the event
         Player target = event.getPlayer();
 
+        // Clear inventory when they join
+        target.getInventory().clear();
+
         // Sets metadata
         target.setMetadata("ready", new FixedMetadataValue(App.getPlugin(App.class), false));
 
