@@ -8,8 +8,7 @@ public class App extends JavaPlugin {
     public FileConfiguration config = getConfig();
 
     // Boolean to store whether or not the game has started
-    // TODO Change this to a GameState object for better consistency with the rest
-    // of the code
+    // TODO Create a GameState object for better consistency
     public boolean gameStarted = false;
 
     // Run when the plugin is enabled
