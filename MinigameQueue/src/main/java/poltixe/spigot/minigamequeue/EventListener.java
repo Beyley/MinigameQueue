@@ -27,8 +27,6 @@ public class EventListener implements Listener {
         } else {
             target.setGameMode(GameMode.ADVENTURE);
         }
-        // target.setMetadata("imposter", new
-        // FixedMetadataValue(App.getPlugin(App.class), false));
     }
 
     @EventHandler
@@ -56,7 +54,8 @@ public class EventListener implements Listener {
 
     @EventHandler
     public void onGameStart(GameStartEvent event) {
-        App.getPlugin(App.class).gameStarted = true;
+        app.gameStarted = true;
+
         Bukkit.broadcastMessage(ChatColor.BLUE + "Game starting!");
     }
 }
