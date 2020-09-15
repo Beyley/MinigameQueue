@@ -2,6 +2,7 @@ package poltixe.spigot.minigamequeue;
 
 import org.bukkit.event.*;
 
+//Basic event to say the game is starting
 public class GameStartEvent extends Event {
 
     public GameStartEvent() {
