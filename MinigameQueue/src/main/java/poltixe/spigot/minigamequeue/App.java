@@ -22,9 +22,6 @@ public class App extends JavaPlugin {
         // Saves the config
         saveConfig();
 
-        // Stops the day from progressing
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "gamerule doDaylightCycle false");
-
         // Set the time to day
         Bukkit.getWorld("world").setTime(8000);
 
