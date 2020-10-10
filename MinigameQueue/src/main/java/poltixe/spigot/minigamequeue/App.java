@@ -1,5 +1,6 @@
 package poltixe.spigot.minigamequeue;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -20,6 +21,12 @@ public class App extends JavaPlugin {
         config.options().copyDefaults(true);
         // Saves the config
         saveConfig();
+
+        // Stops the day from progressing
+        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "gamerule doDaylightCycle false");
+
+        // Set the time to day
+        Bukkit.getWorld("world").setTime(8000);
 
         // Registers the event listener
         getServer().getPluginManager().registerEvents(new EventListener(), this);
