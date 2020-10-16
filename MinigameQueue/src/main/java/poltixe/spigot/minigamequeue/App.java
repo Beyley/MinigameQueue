@@ -24,6 +24,7 @@ public class App extends JavaPlugin {
 
         // Set the time to day
         Bukkit.getWorld("world").setTime(8000);
+        Bukkit.getWorld("world").getWorldBorder().setSize(100);
 
         // Registers the event listener
         getServer().getPluginManager().registerEvents(new EventListener(), this);
